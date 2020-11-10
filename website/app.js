@@ -27,7 +27,7 @@ function performAction(e) {
 
 /* get the current weather from the API*/
 const weatherNow = async(baseURL, zip, apiKey) => {
-    const res = await fetch(baseURL + zip + apiKey);
+    const res = await fetch(baseURL + zip + apiKey + '&units=imperial');
     console.log(res);
     try {
         const data = await res.json();
